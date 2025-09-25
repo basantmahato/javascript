@@ -1,0 +1,133 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-weight: 700;
+    color: #007bff;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem;
+}
+
+.card {
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.card h2 {
+    margin-top: 0;
+    font-weight: 700;
+    color: #555;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+#statusCodeInput {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 60%;
+    transition: border-color 0.3s;
+}
+
+#statusCodeInput:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+#checkButton {
+    padding: 12px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+#checkButton:hover {
+    background-color: #0056b3;
+}
+
+#checkButton:active {
+    transform: scale(0.98);
+}
+
+.result-area {
+    margin-top: 2rem;
+    text-align: left;
+    border-top: 1px solid #eee;
+    padding-top: 1.5rem;
+    display: none; /* Initially hidden */
+}
+
+.result-area.active {
+    display: block;
+}
+
+#codeTitle {
+    color: #007bff;
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+#codeDescription {
+    font-weight: bold;
+    color: #555;
+}
+
+#codeDetails {
+    color: #666;
+    line-height: 1.6;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #fff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #888;
+}

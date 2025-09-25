@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <h1>Product Categories</h1>
+    <label for="category-select">Filter by Category:</label>
+    <select id="category-select">
+        <option value="all">All</option>
+        <option value="electronics">Electronics</option>
+        <option value="books">Books</option>
+        <option value="clothing">Clothing</option>
+    </select>
+
+    <ul id="product-list">
+        <li data-category="electronics">Laptop</li>
+        <li data-category="books">The Lord of the Rings</li>
+        <li data-category="electronics">Smartphone</li>
+        <li data-category="clothing">T-Shirt</li>
+        <li data-category="books">The Hitchhiker's Guide to the Galaxy</li>
+        <li data-category="clothing">Jeans</li>
+    </ul>
+    
+
+    <script src="DynamicFilter.js"></script>
+
+    
+</body>
+</html>

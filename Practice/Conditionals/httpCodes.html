@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Status Code Checker</title>
+    <link rel="stylesheet" href="httpCodes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>HTTP Status Code Checker</h1>
+    </header>
+
+    <main>
+        <div class="card">
+            <h2>Enter Status Code</h2>
+            <div class="input-group">
+                <input type="number" id="statusCodeInput" placeholder="e.g., 200, 404, 503">
+                <button id="checkButton">Check</button>
+            </div>
+            <div id="result" class="result-area">
+                <h3 id="codeTitle"></h3>
+                <p id="codeDescription"></p>
+                <p id="codeDetails"></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HTTP Code Checker</p>
+    </footer>
+
+    <script src="httpCodes.js"></script>
+</body>
+</html>

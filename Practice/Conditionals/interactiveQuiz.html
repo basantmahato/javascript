@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Quiz</title>
+</head>
+<body>
+
+    <h1>Simple Quiz</h1>
+
+    <form id="quiz-form">
+        <p>1. What is the capital of France?</p>
+        <input type="radio" name="q1" value="a"> Paris<br>
+        <input type="radio" name="q1" value="b"> Rome<br>
+        <input type="radio" name="q1" value="c"> Madrid<br>
+
+        <br>
+
+        <p>2. What is 5 + 7?</p>
+        <input type="radio" name="q2" value="a"> 10<br>
+        <input type="radio" name="q2" value="b"> 11<br>
+        <input type="radio" name="q2" value="c"> 12<br>
+
+        <br>
+
+        <p>3. What is the largest planet in our solar system?</p>
+        <input type="radio" name="q3" value="a"> Earth<br>
+        <input type="radio" name="q3" value="b"> Jupiter<br>
+        <input type="radio" name="q3" value="c"> Mars<br>
+
+        <br>
+        
+        <button type="submit" id="submit-btn">Submit Quiz</button>
+    </form>
+
+    <h2 id="resultMessage"></h2>
+
+    <script src="interactiveQuiz.js"></script>
+
+</body>
+</html>
