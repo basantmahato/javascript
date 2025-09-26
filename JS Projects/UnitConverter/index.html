@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="converter-wrapper">
+        <div class="converter-card">
+            <h1>Unit Converter</h1>
+            <p class="description">Convert between various units of measurement.</p>
+
+            <div class="input-group">
+                <label for="inputValue">From:</label>
+                <input type="number" id="inputValue" value="1">
+                <select id="fromUnit">
+                    <option value="meter">Meter (m)</option>
+                    <option value="kilometer">Kilometer (km)</option>
+                    <option value="foot">Foot (ft)</option>
+                    <option value="mile">Mile (mi)</option>
+                    <option value="inch">Inch (in)</option>
+                    <option value="centimeter">Centimeter (cm)</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="outputValue">To:</label>
+                <input type="number" id="outputValue" readonly>
+                <select id="toUnit">
+                    <option value="foot">Foot (ft)</option>
+                    <option value="meter">Meter (m)</option>
+                    <option value="kilometer">Kilometer (km)</option>
+                    <option value="mile">Mile (mi)</option>
+                    <option value="inch">Inch (in)</option>
+                    <option value="centimeter">Centimeter (cm)</option>
+                </select>
+            </div>
+
+            <button id="convertBtn">Convert</button>
+
+            <div class="result-display">
+                <p>Result: <span id="conversionResult"></span></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

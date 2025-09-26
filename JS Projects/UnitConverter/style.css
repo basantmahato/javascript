@@ -1,0 +1,145 @@
+/* Universal Styles & Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Nice gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    padding: 20px;
+}
+
+.converter-wrapper {
+    width: 100%;
+    max-width: 600px; /* Max width for the card */
+    margin: auto;
+}
+
+.converter-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #007bff; /* Primary blue for headings */
+    margin-bottom: 10px;
+    font-size: 2.2em;
+}
+
+.description {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    align-items: center;
+    justify-content: center; /* Center items for better appearance */
+    margin-bottom: 20px;
+    gap: 10px; /* Space between elements */
+}
+
+.input-group label {
+    font-weight: 700;
+    color: #555;
+    flex-basis: 100%; /* Label takes full width on small screens */
+    text-align: left; /* Align label to left for better readability */
+    margin-bottom: 5px;
+}
+
+.input-group input[type="number"],
+.input-group select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    width: 100%; /* Full width by default */
+    max-width: 220px; /* Limit input/select width */
+    color: #333;
+}
+
+/* Adjust input and select widths for larger screens */
+@media (min-width: 500px) {
+    .input-group label {
+        flex-basis: auto; /* Labels don't take full width on larger screens */
+        text-align: right;
+        margin-right: 15px; /* Space between label and input/select */
+        margin-bottom: 0;
+    }
+    .input-group input[type="number"],
+    .input-group select {
+        width: calc(50% - 20px); /* Adjust width to fit two items with gap */
+        max-width: none; /* Remove max-width on larger screens */
+    }
+    .input-group {
+        justify-content: space-between; /* Distribute items */
+    }
+}
+
+
+button#convertBtn {
+    background: #28a745; /* Green for action */
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Full width button */
+    margin-top: 10px;
+}
+
+button#convertBtn:hover {
+    background: #218838;
+}
+
+.result-display {
+    margin-top: 30px;
+    padding: 15px;
+    background: #e9f7ef; /* Light green background for result */
+    border: 1px solid #d4edda;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #155724; /* Dark green text for result */
+}
+
+#conversionResult {
+    color: #007bff; /* Highlight the actual result */
+    font-weight: 700;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .converter-card {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    .input-group label {
+        text-align: center; /* Center labels on very small screens */
+        flex-basis: 100%;
+        margin-right: 0;
+    }
+    .input-group input[type="number"],
+    .input-group select {
+        width: 100%;
+        max-width: 100%;
+    }
+}
