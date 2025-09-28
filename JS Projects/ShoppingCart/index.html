@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shopping Cart 🛒</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --accent: #2563eb;
+      --danger: #ef4444;
+      --text: #1e293b;
+      --muted: #64748b;
+      --radius: 12px;
+      --shadow: 0 4px 16px rgba(0,0,0,0.08);
+      font-family: "Poppins", sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(180deg, var(--bg), #e0f2fe 200px);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      color: var(--text);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 500px;
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    header .logo {
+      font-size: 28px;
+    }
+
+    header h1 {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    header p {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .input-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .input-row input {
+      flex: 1;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: var(--radius);
+      font-size: 14px;
+    }
+
+    .btn {
+      padding: 10px 14px;
+      border: none;
+      border-radius: var(--radius);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn.danger {
+      background: var(--danger);
+      color: #fff;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f9fafb;
+      padding: 10px 14px;
+      border-radius: var(--radius);
+      border: 1px solid #eee;
+    }
+
+    .cart-summary {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 500;
+      font-size: 15px;
+      padding: 10px 0;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    @media (max-width: 600px) {
+      .input-row {
+        flex-direction: column;
+      }
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="logo">🛒</span>
+      <div>
+        <h1>Shopping Cart</h1>
+        <p>Add, remove, and view your items</p>
+      </div>
+    </header>
+
+    <div class="input-row">
+      <input id="item-input" type="text" placeholder="Enter item..." />
+      <button id="add-item" class="btn primary">Add Item</button>
+    </div>
+
+    <ul id="cart-list">
+      <!-- Example Items -->
+      <!-- <li>
+        <span>Apple</span>
+        <button class="btn danger">Remove</button>
+      </li>
+      <li>
+        <span>Orange</span>
+        <button class="btn danger">Remove</button>
+      </li> -->
+    </ul>
+
+    <div class="cart-summary">
+      <span>Total Items:</span>
+      <span id="total-count">2</span>
+    </div>
+
+    <button id="remove-last" class="btn danger">Remove Last Item</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
