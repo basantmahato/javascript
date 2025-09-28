@@ -1,30 +1,37 @@
-const input = document.getElementById("input-box")
-const button = document.getElementById("add-button")
-const removeButton = document.getElementById("remove-button")
-const list = document.getElementById("list-container")
+const taskInput = document.getElementById("task-input")
+const addTaskBtn = document.getElementById("add-task")
+const taskList = document.getElementById("task-list")
 
-button.addEventListener("click",() =>{
-    let inputValue = input.value;
-    console.log(inputValue);
-
-    if(inputValue === ""){
-        alert("you must write somethinng")
-        return;
-    }
-
-    let li = document.createElement("li")
-
-    li.innerText = inputValue;
-
-    list.appendChild(li);
-
-    input.value = "";
-    
-})
+let tasks = []
 
 
-removeButton.addEventListener("click",()=>{
+function renderTasks() {
+  taskList.innerHTML = ""; // clear old list
 
-    list.lastChild.remove();
+  tasks.forEach((task, index) => {
+    const li = document.createElement("li");
 
-})
+    li.innerHTML = `
+      <span>${task}</span>
+      <button class="delete-btn" onclick="deleteTask(${index})">X</button>
+    `;
+
+    taskList.appendChild(li);
+  });
+}
+
+addTaskBtn.addEventListener("click", () => {
+  const taskText = taskInput.value.trim();
+
+  if (taskText !== "") {
+    tasks.push(taskText); 
+    taskInput.value = ""; 
+    renderTasks(); 
+  }
+});
+
+// Delete task with splice()
+function deleteTask(index) {
+  tasks.splice(index, 1); 
+  renderTasks();
+}
