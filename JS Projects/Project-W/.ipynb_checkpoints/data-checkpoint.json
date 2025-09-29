@@ -1,0 +1,80 @@
+{
+
+
+    " feature": {
+      "temperature": "42°",
+      "rain": "0.3mm",
+      "wind":"9km/h"
+
+    },
+    " monday": {
+      "night": "Cloudy",
+      "morning": "Sunny",
+      "afternoon": "Sunny",
+      "evening": "Sunny",
+      "temperature":"42°/27°",
+      "uvindex":"12 extreme",
+      "wind":"11km/h"
+    },
+
+    " tuesday": {
+      "night": "Cloudy",
+      "morning": "Sunny",
+      "afternoon": "Sunny",
+      "evening": "Sunny",
+      "temperature":"42°/27°",
+      "uvindex":"12 extreme",
+      "wind":"11km/h"
+    },
+
+    " wednesday": {
+      "night": "Cloudy",
+      "morning": "Sunny",
+      "afternoon": "Sunny",
+      "evening": "Sunny",
+      "temperature":"42°/27°",
+      "uvindex":"12 extreme",
+      "wind":"11km/h"
+    },
+
+    " thursday": {
+      "night": "Cloudy",
+      "morning": "Sunny",
+      "afternoon": "Sunny",
+      "evening": "Sunny",
+      "temperature":"42°/27°",
+      "uvindex":"12 extreme",
+      "wind":"11km/h"
+    },
+
+    " friday": {
+        "night": "Cloudy",
+        "morning": "Sunny",
+        "afternoon": "Sunny",
+        "evening": "Sunny",
+        "temperature":"42°/27°",
+        "uvindex":"12 extreme",
+        "wind":"11km/h"
+      },
+
+      " saturday": {
+        "night": "Cloudy",
+        "morning": "Sunny",
+        "afternoon": "Sunny",
+        "evening": "Sunny",
+        "temperature":"42°/27°",
+        "uvindex":"12 extreme",
+        "wind":"11km/h"
+      },
+
+      " sunday": {
+        "night": "Cloudy",
+        "morning": "Sunny",
+        "afternoon": "Sunny",
+        "evening": "Sunny",
+        "temperature":"42°/27°",
+        "uvindex":"12 extreme",
+        "wind":"11km/h"
+      }
+  }
+  

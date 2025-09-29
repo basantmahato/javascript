@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FixMyRoad - Report Road Issues</title>
+  <!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->4
+  <nav class="navbar">
+    <div class="logo">CityWatch</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="working.html">How It Works</a></li>
+      <li><a href="report.html">Report</a></li>
+    </ul>
+    <div class="burger" onclick="toggleMenu()">
+      ☰
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Report Potholes & Waterlogging</h1>
+      <p>Together we make roads safer. Report problems, geotag them, and help fix your city.</p>
+      <a href="report.html" class="cta-btn">📍 Report Now</a>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="info-section" id="how-it-works">
+    <h2>How It Works</h2>
+    <ul class="steps">
+      <li>📷 Upload a photo of the issue</li>
+      <li>📍 Auto-capture location via GPS</li>
+      <li>🗺️ View your report on a live map</li>
+      <li>✅ Authorities take action quickly</li>
+    </ul>
+  </section>
+
+  <!-- Placeholder for report section -->
+  <section class="report-section" id="report">
+    <h2>Report an Issue</h2>
+    <p>Coming up next... (Form & Map)</p>
+  </section>
+
+  <!-- section uploading -->
+
+ <section class="upload-photo-section">
+  <h2>📷 Upload a Photo</h2>
+  <p>Select a photo of the pothole or waterlogged area:</p>
+
+  <div class="upload-box">
+    <input type="file" id="photoInput" accept="image/*" />
+    <label for="photoInput" class="upload-label">Choose Photo</label>
+
+    <div id="previewContainer">
+      <img id="photoPreview" alt="Preview will appear here" />
+    </div>
+
+    <button id="uploadBtn" class="upload-btn" disabled>📤 Upload Photo</button>
+  </div>
+</section>
+
+ <!-- Popup Modal -->
+<div id="popupModal" class="popup-modal">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <p>✅ Your problem has been submitted and will be reviewed soon.</p>
+  </div>
+</div>
+
+<!--GEOLOCATION  -->
+<section class="geolocation-section" id="geolocation">
+  <h2>📍 Find Your Current Location</h2>
+  <p>Click the button below to get your real-time location using your browser.</p>
+
+  <div class="geo-box">
+    <button id="getLocationBtn">Get Location</button>
+    <div id="locationResult">
+      <p>Latitude: <span id="latitude">--</span></p>
+      <p>Longitude: <span id="longitude">--</span></p>
+      <p id="geoStatus"></p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Leaflet Live Map Section -->
+<section class="live-map-section     map-hide" id="live-map">
+  <h2>🗺️ View Heavy Traffic Routes Of Jameshedpur</h2>
+  <p>Click below to geolocate yourself.</p>
+
+  <div class="map-wrapper">
+    <form id="mapReportForm">
+      <textarea id="description" placeholder="Describe the issue..." required></textarea>
+      <button type="submit">📍 Submit Report</button>
+    </form>
+
+    <div id="map"></div>
+  </div>
+
+  <!-- Popup Modal -->
+  <div id="mapPopupModal" class="popup-modal">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closeMapPopup()">&times;</span>
+      <p>✅ Your issue has been submitted with the location.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ANOTHER GEO -->
+<!-- 📌 Geolocation & Report Section -->
+<section class="geolocation-map-section" id="geo-map">
+  <h2>📌 Show My Location on Map</h2>
+  <p>Click below to geolocate yourself and submit a report.</p>
+
+  <div class="geo-map-box">
+    <button id="showMapLocationBtn">📍 Get & Show My Location</button>
+
+    <div id="userMap"></div>
+
+    <textarea id="geoDescription" placeholder="Describe the issue..." required></textarea>
+    <button id="geoSubmitBtn">📤 Submit Report</button>
+
+    <p id="mapStatus"></p>
+  </div>
+
+  <!-- Popup -->
+  <div id="geoPopup" class="popup-modal">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closeGeoPopup()">&times;</span>
+      <p>✅ Your issue has been submitted with the location.</p>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <h2>FixMyRoad</h2>
+      <p>Safer Roads, Smarter Cities</p>
+    </div>
+
+    <div class="footer-info">
+      <p>📍 Jamshedpur, Jharkhand</p>
+      <p>📧 support@fixmyroad.in</p>
+      <p>© 2025 FixMyRoad</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="note">
+            <p>All the information is gathered from <a href="https://www.accuweather.com/">Accuweather</a></p>
+        </div>
+
+        <div class="headcontainer">
+            <div class="logo">
+                <img src="Images/WeatherLogo.png" alt="Weather Forecast">
+                <div class="logotxt">
+                    <p> <i class="fa-solid fa-location-dot"></i> Jamshedpur,Jharkhand ( India ) </p>
+                </div>
+            </div>
+
+            <div class="weekmenu">
+                <ul>
+                    <li><a href="#print-section"> Monday</a></li>
+                    <li><a href="#print-section"> Tuesday</a></li>
+                    <li><a href="#print-section"> Wednesday</a></li>
+                    <li><a href="#print-section"> Thursday</a></li>
+                    <li><a href="#print-section"> Friday</a></li>
+                    <li><a href="#print-section"> Saturday</a></li>
+                    <li><a href="#print-section"> Sunday</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- Header Close -->
+
+
+    <div class="feature">
+        <div class="ftext"><p><i class="fa-solid fa-clock"></i> Current Weather Conditions</p></div>
+
+        <div class="fcontent">
+
+            <div class="fcontent1"><i class="fa-solid fa-temperature-half"></i><p id="fe-temp"> </p></div>
+
+            <div class="fcontent2"><i class="fa-solid fa-umbrella"></i> <p id="fe-rain"></p></div>
+
+            <div class="fcontent3"><i class="fa-solid fa-wind"></i><p id="fe-wind"> </p></div>
+
+
+        </div>
+    </div>
+
+
+
+
+<!--Feature end-->
+<div class="w" id="print-section">
+
+    
+    <div class="wtable" id="weather-t">
+        <div class="wd"><h1>Weekly Weather Forecast</h1></div>
+        <div class="w1">
+            <div class="w1c1"><p class="wt">Days</p></div>
+            <div class="w1c2"><p class="wt">Night</p></div>
+            <div class="w1c3"><p class="wt">Morning</p></div>
+            <div class="w1c4"><p class="wt">Afternoon</p></div>
+            <div class="w1c5"><p class="wt">Evening</p></div>
+            <div class="w1c6"><p class="wt">Temperature High/Low</p></div>
+            <div class="w1c7"><p class="wt">Uv Index</p></div>
+            <div class="w1c8"><p class="wt">Wind</p></div>
+        </div>
+        <div class="wd">
+            <div class="w2c1"><p class="wt">Monday</p></div>
+            <div class="w2c2"><p id="mon-night"></p></div>
+            <div class="w2c3"><p id="mon-morning"></p></div>
+            <div class="w2c4"><p id="mon-afternoon"></p></div>
+            <div class="w2c5"><p id="mon-evening"></p></div>
+            <div class="w2c6"><p id="mon-temperature"></p></div>
+            <div class="w2c7"><p id="mon-uvindex"></p></div>
+            <div class="w2c8"><p id="mon-wind"></p></div>
+        </div>
+        <div class="wd">
+            <div class="w3c1"><p class="wt">Tuesday</p></div>
+            <div class="w3c2"><p id="tue-night"></p></div>
+            <div class="w3c3"><p id="tue-morning"></p></div>
+            <div class="w3c4"><p id="tue-afternoon"></p></div>
+            <div class="w3c5"><p id="tue-evening"></p></div>
+            <div class="w3c6"><p id="tue-temperature"></p></div>
+            <div class="w3c7"><p id="tue-uvindex"></p></div>
+            <div class="w3c8"><p id="tue-wind"></p></div>
+        </div>
+        <div class="wd">
+            <div class="w4c1"><p class="wt">Wednesday</p></div>
+            <div class="w4c2"><p id="wed-night"></p></div>
+            <div class="w4c3"><p id="wed-morning"></p></div>
+            <div class="w4c4"><p id="wed-afternoon"></p></div>
+            <div class="w4c5"><p id="wed-evening"></p></div>
+            <div class="w4c6"><p id="wed-temperature"></p></div>
+            <div class="w4c7"><p id="wed-uvindex"></p></div>
+            <div class="w4c8"><p id="wed-wind"></p></div>
+        </div>
+        <div class="wd">
+            <div class="w5c1"><p class="wt">Thursday</p></div>
+            <div class="w5c2"><p id="thu-night"></p></div>
+            <div class="w5c3"><p id="thu-morning"></p></div>
+            <div class="w5c4"><p id="thu-afternoon"></p></div>
+            <div class="w5c5"><p id="thu-evening"></p></div>
+            <div class="w5c6"><p id="thu-temperature"></p></div>
+            <div class="w5c7"><p id="thu-uvindex"></p></div>
+            <div class="w5c8"><p id="thu-wind"></p></div>
+        </div>
+        <div class="wd">
+            <div class="w6c1"><p class="wt">Friday</p></div>
+            <div class="w6c2"><p id="fri-night"></p></div>
+            <div class="w6c3"><p id="fri-morning"></p></div>
+            <div class="w6c4"><p id="fri-afternoon"></p></div>
+            <div class="w6c5"><p id="fri-evening"></p></div>
+            <div class="w6c6"><p id="fri-temperature"></p></div>
+            <div class="w6c7"><p id="fri-uvindex"></p></div>
+            <div class="w6c8"><p id="fri-wind"></p></div>
+        </div>
+        <div class="wd">
+            <div class="w7c1"><p class="wt">Saturday</p></div>
+            <div class="w7c2"><p id="sat-night"></p></div>
+            <div class="w7c3"><p id="sat-morning"></p></div>
+            <div class="w7c4"><p id="sat-afternoon"></p></div>
+            <div class="w7c5"><p id="sat-evening"></p></div>
+            <div class="w7c6"><p id="sat-temperature"></p></div>
+            <div class="w7c7"><p id="sat-uvindex"></p></div>
+            <div class="w7c8"><p id="sat-wind"></p></div>
+        </div>
+        <div class="wd">
+            <div class="w8c1"><p class="wt">Sunday</p></div>
+            <div class="w8c2"><p id="sun-night"></p></div>
+            <div class="w8c3"><p id="sun-morning"></p></div>
+            <div class="w8c4"><p id="sun-afternoon"></p></div>
+            <div class="w8c5"><p id="sun-evening"></p></div>
+            <div class="w8c6"><p id="sun-temperature"></p></div>
+            <div class="w8c7"><p id="sun-uvindex"></p></div>
+            <div class="w8c8"><p id="sun-wind"></p></div>
+        </div>
+      
+    </div>
+        
+</div>
+<!----footer start-->
+<footer>
+    <p><button class="btn" onclick="printDiv('print-section')">  Print Data</button></p>
+    <p><button class="btn" onclick="replacew()">Wind Graph</button></p>
+    <p><button class="btn" onclick="replaceuv()">UV Index Graph</button></p>
+    <p><button class="btn" onclick="revertDiv()">Weather Table</button></p>
+
+
+   <!-------- <button class="btn" onClick="window.location.reload();">Weather Table</button> ------->
+</footer>
+<script src="script.js"></script>
+</body>
+
+</html>
