@@ -9,17 +9,37 @@ const searchData = document.getElementById("search")
 
 let phonebook = []
 
-const render = (filtered) => {
+const render = (dataToRender = phonebook) => {
     contactList.innerHTML = ""
-    phonebook.forEach(function(phonebook){
+    dataToRender.forEach(function(contact){
         const li = document.createElement("li")
-        li.innerHTML = `Name : ${phonebook.name} Phone: ${phonebook.phone} Email: ${phonebook.email}`
+        li.innerHTML = `Name : ${contact.name} Phone: ${contact.phone} Email: ${contact.email}`
         contactList.appendChild(li)
     })
 
 }
 
-addContactBtn.addEventListener('click', ()=>{
+
+// const renderFiltered = (filtered) => {
+//     contactList.innerHTML = ""
+//     const filter = filtered || phonebook
+//     filter.forEach(function(filter){
+//         const li = document.createElement("li")
+//         li.innerHTML = `Name : ${filter.name} Phone: ${filter.phone} Email: ${filter.email}`
+//         contactList.appendChild(li)
+//     })
+
+// }
+
+addContactBtn.addEventListener('click', (e)=>{
+
+    const contactForm = document.getElementById("contactForm")
+
+    contactForm.addEventListener('submit', (e)=>{
+        e.preventDefault()
+    })
+
+
     const name = nameInput.value;
     const phone = phoneInput.value;
     const email = emailInput.value;
@@ -42,6 +62,12 @@ addContactBtn.addEventListener('click', ()=>{
 
     render()
 
+   
+        nameInput.value = "";
+        phoneInput.value = "";
+        emailInput.value = "";
+    
+
     
 
 })
@@ -53,7 +79,7 @@ function searchContacts(query) {
     phonebook.name.toLowerCase().includes(query.toLowerCase())
   );
 
-  console.log(phonebook.name)
+  console.log(filtered + "filtered")
   render(filtered);
 }
 
