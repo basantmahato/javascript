@@ -6,9 +6,15 @@ const person = {
 
 // Add Properties
 Object.defineProperties(person, {
-  language: {value: "en"},
-  year: {value: "Hello"}
-});
+  firstName: {writable: true,
+    enumerable:false,
+    configurable:false
+  },
+    lastName: {writable: false,
+    enumerable:true,
+    configurable:false
+  }
+}); 
 
 
 
