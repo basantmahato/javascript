@@ -5,7 +5,6 @@ function one() {
     const data = await fetch(url);
     const usersdata = await data.json();
     resolve(usersdata);
-    
   });
 }
 
@@ -14,7 +13,7 @@ function two() {
     const data = await fetch(url);
     const usersdata = await data.json();
     resolve(usersdata);
-    reject("error")
+    reject("error");
   });
 }
 
@@ -23,12 +22,6 @@ one()
     console.log(usersdata[0]);
     return two();
   })
-
- 
-
-
-
-    .then((usersdata) => {
+  .then((usersdata) => {
     console.log(usersdata[1]);
   });
-
