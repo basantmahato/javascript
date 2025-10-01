@@ -1,3 +1,5 @@
+// global prototype
+
 let valueArr = [4,7]
 
 Array.prototype.sum =  function(){

@@ -6,6 +6,8 @@
 // console.log(multiplyby5.power);
 // console.log(multiplyby5.prototype)
 
+//
+
 
 function createUser(username , score){
     this.username = username
