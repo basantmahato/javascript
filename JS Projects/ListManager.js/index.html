@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List Item Manager ✅</title>
+    <style>
+      :root {
+        --bg: #f6f8fb;
+        --card: #ffffff;
+        --accent: #2563eb;
+        --muted: #6b7280;
+        --danger: #ef4444;
+        --radius: 12px;
+        --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        font-family: "Poppins", sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: linear-gradient(180deg, var(--bg), #e0f2fe 200px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+        color: #111827;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 800px;
+        background: var(--card);
+        border-radius: var(--radius);
+        padding: 24px;
+        box-shadow: var(--shadow);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      header {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      header .logo {
+        background: var(--accent);
+        color: #fff;
+        font-weight: bold;
+        font-size: 20px;
+        width: 50px;
+        height: 50px;
+        border-radius: var(--radius);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      header h1 {
+        font-size: 22px;
+      }
+      header p {
+        font-size: 14px;
+        color: var(--muted);
+      }
+
+      .input-row {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .input-row input {
+        flex: 1;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: var(--radius);
+        font-size: 14px;
+      }
+      .btn {
+        padding: 10px 14px;
+        border: none;
+        border-radius: var(--radius);
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+      .btn.primary {
+        background: var(--accent);
+        color: #fff;
+      }
+      .btn.ghost {
+        background: #f9fafb;
+        border: 1px solid #ddd;
+        color: var(--muted);
+      }
+      .btn.danger {
+        background: var(--danger);
+        color: #fff;
+      }
+
+      .item-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fafafa;
+        padding: 10px 14px;
+        border-radius: var(--radius);
+        border: 1px solid #eee;
+      }
+      .item span {
+        font-weight: 500;
+      }
+      .actions {
+        display: flex;
+        gap: 8px;
+      }
+      .actions button {
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      @media (max-width: 600px) {
+        .input-row {
+          flex-direction: column;
+        }
+        .btn {
+          width: 100%;
+        }
+      }
+
+      footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        background: #f9fafb;
+        border-top: 1px solid #e5e7eb;
+        font-size: 14px;
+        color: #6b7280;
+      }
+      footer span {
+        color: red; /* heart color */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">✅</div>
+        <div>
+          <h1>List Item Manager</h1>
+          <p>Add, remove, and manage list items easily</p>
+        </div>
+      </header>
+
+      <div class="input-row">
+        <input id="item-input" type="text" placeholder="Enter an item..." />
+        <button id="add-end" class="btn primary">Add to End</button>
+        <button id="add-start" class="btn ghost">Add to Start</button>
+      </div>
+
+      <div class="input-row">
+        <button id="remove-end" class="btn ghost">Remove End</button>
+        <button id="remove-start" class="btn ghost">Remove Start</button>
+        <button id="clear-list" class="btn danger">Clear List</button>
+      </div>
+
+      <ul id="item-list" class="item-list">
+        <!-- <li class="item">
+        <span>Task 1</span>
+        <div class="actions">
+          <button id="edit-btn" class="edit-btn">✏️</button>
+          <button  id="delete-btn" class="delete-btn">🗑️</button>
+        </div>
+      </li>
+      <li class="item">
+        <span>Task 2</span>
+        <div class="actions">
+          <button id="edit-btn" class="edit-btn">✏️</button>
+          <button  id="delete-btn" class="delete-btn">🗑️</button>
+        </div>
+      </li> -->
+      </ul>
+    </div>
+    <footer>Crafted with  <span>❤️</span> by Basant </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

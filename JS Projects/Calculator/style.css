@@ -1,0 +1,28 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap');
+html , body{
+    height: 100%;
+    width: 100%;
+    font-family: "Bitcount Prop Single", system-ui;
+}
+
+.button{
+    padding: 22px;
+    margin: 0 3px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    width:66PX ;
+}
+
+.row{
+    margin: 6px 0 ;
+}
+
+.row input{
+    font-size: 20px;
+    margin: 0;
+    padding:10px 0px ;
+    border: 2px solid black;
+    border-radius: 5px;
+}

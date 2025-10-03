@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic To-Do List</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #f7f8fa;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 40px;
+    }
+
+    .todo-container {
+      width: 100%;
+      max-width: 400px;
+      background: #fff;
+      padding: 20px 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    .todo-container h2 {
+      text-align: center;
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    .input-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .input-row input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    .input-row button {
+      padding: 10px 15px;
+      background: #4CAF50;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .input-row button:hover {
+      background: #45a049;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ul li {
+      background: #f0f0f0;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.3s;
+    }
+
+    ul li:hover {
+      background: #e4e4e4;
+    }
+
+    ul li span {
+      flex: 1;
+      color: #444;
+    }
+
+    .delete-btn {
+      background: #ff4d4d;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .delete-btn:hover {
+      background: #e60000;
+    }
+  </style>
+</head>
+<body>
+  <div class="todo-container">
+    <h2>📋 My To-Do List</h2>
+
+    <div class="input-row">
+      <input id="task-input" type="text" placeholder="Enter a task...">
+      <button id="add-task">Add</button>
+    </div>
+
+    <ul id="task-list">
+      <!-- <li>
+        <span>Learn JavaScript basics</span>
+        <button class="delete-btn">X</button>
+      </li>
+      <li>
+        <span>Practice arrays with splice()</span>
+        <button class="delete-btn">X</button>
+      </li>
+      <li>
+        <span>Build To-Do UI</span>
+        <button class="delete-btn">X</button>
+      </li> -->
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

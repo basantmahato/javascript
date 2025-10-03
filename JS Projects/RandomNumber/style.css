@@ -1,0 +1,124 @@
+/* Universal Styles & Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #ffffff, #005eff); /* Soft pink/blue gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    padding: 20px;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 450px;
+}
+
+.game-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+h1 {
+    color: #4a4e69;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+.range-info {
+    color: #888;
+    margin-bottom: 25px;
+    font-size: 1.1em;
+}
+
+.message {
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 700;
+    /* Default look */
+    background: #f0f0f0;
+    color: #555;
+}
+
+/* Specific message colors will be added by JavaScript */
+.message.high { background-color: #fdd8d8; color: #cc0000; } /* Too High (Red) */
+.message.low { background-color: #d8f5fd; color: #007bb6; }  /* Too Low (Blue) */
+.message.win { background-color: #ddfadf; color: #008000; }  /* Win (Green) */
+
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#guessInput {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    text-align: center;
+}
+
+#submitBtn, .reset-button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submitBtn {
+    background: #5a7dff; /* Primary Action Blue */
+    color: white;
+}
+
+#submitBtn:hover {
+    background: #3e60e0;
+}
+
+.reset-button {
+    background: #ff6b6b; /* Red for reset */
+    color: white;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.stats {
+    font-size: 1em;
+    color: #555;
+}
+
+#attemptsCount {
+    font-weight: 700;
+    color: #4a4e69;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 400px) {
+    .game-card {
+        padding: 30px 20px;
+    }
+    .input-group {
+        flex-direction: column;
+    }
+    #submitBtn {
+        width: 100%;
+    }
+}

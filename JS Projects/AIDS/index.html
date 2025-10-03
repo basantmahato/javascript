@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="images/aidslogo.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.0/package/dist/xlsx.full.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+   <nav class="navbar">
+    <div class="logo">AIDS AWARENESS</div>
+     <input type="checkbox" id="menu-toggle" />
+     <label for="menu-toggle" class="hamburger">&#9776;</label> 
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="info.html">HIV/AIDS Info</a></li>
+      <li><a href="testing.html">Testing</a></li>
+      <li><a href="stories.html">Stories</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+ 
+  </nav>
+
+  <div class="aids-info">
+    <h2>What is AIDS?</h2>
+    <p>
+      AIDS (Acquired Immunodeficiency Syndrome) is the final and most severe stage of HIV (Human Immunodeficiency Virus) infection. It occurs when the body's immune system becomes badly damaged because of the virus. Without treatment, people with AIDS typically survive about 3 years.
+      AIDS (Acquired Immunodeficiency Syndrome) is the final and most severe stage of HIV (Human Immunodeficiency Virus) infection, where the immune system becomes extremely weak and vulnerable to infections. </p>
+
+      <p>It occurs when HIV, over time, destroys large numbers of CD4 (T-helper) cells, which are essential in defending the body against disease.
+
+A person is said to have AIDS when their CD4 count falls below 200 cells/mm³, or when they develop certain opportunistic infections or cancers.
+
+HIV is mainly spread through the exchange of infected bodily fluids such as blood, semen, vaginal fluids, rectal fluids, and breast milk.
+
+The most common modes of transmission include unprotected sexual intercourse, shared needles, infected blood transfusions, and mother-to-child transmission.
+
+AIDS is not spread through casual contact like hugging, shaking hands, sharing food, or mosquito bites.
+
+In the early stage of HIV, people may develop flu-like symptoms such as fever, sore throat, and fatigue, or may have no symptoms at all.
+
+During the clinical latency stage, HIV remains active but reproduces at very low levels; this stage can last several years without symptoms.
+
+AIDS symptoms include extreme weight loss, chronic diarrhea, night sweats, skin infections, respiratory illnesses, and memory issues.
+
+Without treatment, HIV almost always progresses to AIDS, but with proper antiretroviral therapy (ART), the virus can be controlled effectively.
+
+ART doesn’t cure HIV, but it reduces viral load to undetectable levels, improves immune function, and prevents progression to AIDS.
+
+People on ART can live long, healthy, and productive lives, often with a normal lifespan.
+
+Prevention strategies include correct condom use, regular HIV testing, avoiding needle sharing, and using preventive medications like PrEP and PEP.
+
+Pregnant women with HIV can prevent transmission to their babies by taking ART during pregnancy and avoiding breastfeeding.
+
+Globally, millions of people live with HIV/AIDS, with the highest burden in Sub-Saharan Africa and a significant number in India.
+
+India runs national programs like NACP (National AIDS Control Programme) and provides free ART, testing, and awareness drives.
+
+Social stigma and discrimination remain major barriers to treatment and testing, especially in rural and conservative communities.
+
+Organizations and governments work globally to educate people, reduce myths, and promote inclusion and acceptance of people living with HIV.
+
+World AIDS Day, observed on December 1, raises global awareness, honors those lost to AIDS, and supports ongoing prevention efforts.
+
+Through education, early testing, treatment, and compassion, AIDS is now a manageable condition, not a death sentence.
+    </p></p>
+
+    <h3>How is it caused?</h3>
+    <p>
+      AIDS is caused by the HIV virus. It is transmitted through unprotected sexual contact, contaminated needles, from mother to child during childbirth or breastfeeding, and through transfusions of infected blood.
+    </p>
+
+    <h3>Prevention Tips:</h3>
+    <ul>
+      <li>Use condoms correctly every time you have sex</li>
+      <li>Get tested and know your partner’s HIV status</li>
+      <li>Avoid sharing needles or syringes</li>
+      <li>Take PrEP (pre-exposure prophylaxis) if at high risk</li>
+    </ul>
+  </div>
+
+
+  <!-- aids global chart data -->
+
+    <div class="aids-info">
+    <h2>Global AIDS Statistics</h2>
+    <p>Here is a comparison of the estimated number of people living with HIV in selected countries.</p>
+
+    <div class="chart-container">
+      <canvas id="aidsChart"></canvas>
+    </div>
+  </div>
+
+
+
+  <div class="aids-info">
+  <h2>India - Statewise HIV Data</h2>
+  <p>This chart shows estimated numbers of people living with HIV in major Indian states.</p>
+  <div class="chart-container">
+    <canvas id="indiaHivChart"></canvas>
+  </div>
+</div>
+
+
+<div class="aids-info">
+  <h2>India - Statewise HIV Data (Pie Chart)</h2>
+  <p>This pie chart represents the proportion of people living with HIV in selected Indian states.</p>
+  <div class="chart-container">
+    <canvas id="indiaHivPieChart"></canvas>
+  </div>
+</div>
+
+
+<!-- IFRAME -->
+
+<div class="sheet-container">
+  <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQinzAlYHp6tdMFkkqNIqd9fqSRqTIF7slueLZYAk0brJSIW0fzVS2XgE1LQdW3J-XcCvA5rffsafrS/pubhtml?widget=true&amp;headers=false"></iframe>
+</div>
+
+<!-- footer start -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-logo left">
+      <img src="images/who.jpg" alt="WHO Logo">
+    </div>
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="index.html">What is HIV/AIDS?</a>
+      <a href="testing.html">Get Help</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-logo right">
+      <img src="images/aidslogo.png" alt="AIDS Ribbon Logo">
+    </div>
+  </div>
+</footer>
+
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
