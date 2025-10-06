@@ -1,3 +1,4 @@
+
 const description = document.getElementById("description");
 const amount = document.getElementById("amount");
 const amountType = document.getElementById("type");
@@ -25,6 +26,35 @@ balanceElement.innerText = 0;
 let currentDate = new Date();
 let options = { year: "numeric", month: "short", day: "numeric" };
 let formattedDate = currentDate.toLocaleDateString("en-US", options);
+
+
+const exportDataBtn = document.getElementById("export-data");
+
+exportDataBtn.addEventListener('click', () => {
+
+    window.print();
+});
+
+
+const newTransactionBtn = document.getElementById("new-transaction-btn");
+
+newTransactionBtn.addEventListener('click', () => {
+   
+    if (!confirm("Are you sure you want to start a new ledger? This will permanently delete all stored transactions.")) {
+        return;
+    }
+    
+   
+    localStorage.removeItem("storedData");
+    
+    
+    const emptyData = [];
+    
+   
+    updateUI(emptyData);
+    
+    alert("All transactions have been cleared.");
+});
 
 
 addTransaction.addEventListener("click", () => {

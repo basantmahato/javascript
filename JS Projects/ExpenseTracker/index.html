@@ -3,8 +3,61 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+@media print {
+    /* Step 1: Hide the entire body content by default */
+    body * {
+        visibility: hidden;
+    }
+
+    /* Step 2: Make the specific transaction list container and its children visible */
+    /* Target the container with the transaction list (lg:col-span-2) */
+    .lg\:col-span-2,
+    .lg\:col-span-2 * {
+        visibility: visible;
+    }
+
+    /* Step 3: Position and style the printable content for best viewing */
+    .lg\:col-span-2 {
+        position: absolute; /* Brings the content to the top of the print area */
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        
+        /* Remove Tailwind styles that interfere with printing */
+        background-color: white !important;
+        box-shadow: none !important;
+    }
+    
+    /* Step 4: Hide specific elements NOT needed for a printed report */
+    
+    /* Hide the form sidebar next to the list (lg:grid-cols-3 structure) */
+    .lg\:grid-cols-3 > aside { 
+        display: none !important;
+    }
+
+    /* Hide the main header/balance card */
+    .mb-6 { 
+        display: none !important;
+    }
+
+    /* Hide the 'Show: All/Income/Expense' filter buttons within the transaction list header */
+    .lg\:col-span-2 .flex.items-center.gap-2 {
+        display: none !important;
+    }
+
+    /* Hide helpful tips at the bottom */
+    .text-sm.text-gray-500:last-child {
+        display: none !important;
+    }
+}
+</style>
+  
   <title>Expense Tracker — UI (Tailwind only)</title>
   <script src="https://cdn.tailwindcss.com"></script>
+
   <meta name="description" content="Expense Tracker UI built with Tailwind CSS (HTML + CSS only)." />
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased">
@@ -19,11 +72,11 @@
             <p class="text-sm text-gray-500 mt-1">Track income, expenses and see your balance at a glance</p>
           </div>
           <div class="flex items-center gap-3">
-            <button class="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-200 hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-300">
+            <button id="export-data" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-200 hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-300">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a2 2 0 00-2 2v2H6a2 2 0 00-2 2v6h12V8a2 2 0 00-2-2h-2V4a2 2 0 00-2-2z" /></svg>
               <span class="text-sm font-medium">Export</span>
             </button>
-            <button class="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-300">
+            <button id="new-transaction-btn" class="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-300">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M2 5a2 2 0 012-2h1v2H4v10h12V5h-1V3h1a2 2 0 012 2v11a1 1 0 01-1 1H3a1 1 0 01-1-1V5z"/><path d="M8 9h4v5H8z"/></svg>
               <span class="text-sm font-medium">New</span>
             </button>
@@ -174,16 +227,16 @@
               </button>
             </div>
 
-            <p class="text-xs text-gray-400">Note: This is a static UI (HTML + Tailwind) with Add/delete/localStorage behaviour.</p>
+            <!-- <p class="text-xs text-gray-400">Note: This is a static UI (HTML + Tailwind) with Add/delete/localStorage behaviour.</p> -->
           </form>
 
         </aside>
       </div>
 
       <!-- Helpful tips -->
-      <div class="mt-6 text-sm text-gray-500">
+      <!-- <div class="mt-6 text-sm text-gray-500">
         <p><span class="font-medium">UX tips:</span> show clear affordances for income vs expense, use colors (green for income, red for expense), and provide microcopy for error states. Consider adding animated empty states and confirm dialogs for deletes when you add JS.</p>
-      </div>
+      </div> -->
 
     </section>
   </main>
