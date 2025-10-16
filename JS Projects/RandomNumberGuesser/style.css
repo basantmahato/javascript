@@ -1,0 +1,315 @@
+/*
+ * Funky & Stylish Redesign: Guess My Number!
+ * Theme: Cyber-Synthwave
+ */
+
+/* Global Reset and Basic Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+/* Use a funky, readable font and a vibrant background */
+body {
+  font-family: 'Arial Black', sans-serif; /* Bold and funky font */
+  color: #CCFFFF; /* Neon Cyan Text */
+  background-color: #1a0033; /* Deep Cyber-Purple */
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2.5rem;
+  transition: background-color 0.5s ease-in-out; /* Smooth color change for win/loss */
+  /* Optional: Subtle background pattern */
+  background-image: radial-gradient(circle at center, #2e005c 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Header Styling */
+header {
+  position: relative;
+  width: 100%;
+  max-width: 120rem;
+  /* Glowing border effect */
+  border-bottom: 7px solid #FF00AA; /* Neon Pink */
+  box-shadow: 0 5px 20px #FF00AA, 0 0 5px #CCFFFF;
+  padding-bottom: 3rem;
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  /* Text shadow for a 'neon glow' */
+  text-shadow: 0 0 10px #FF00AA, 0 0 20px #FF00AA;
+}
+
+.between {
+  font-size: 2rem;
+  position: absolute;
+  top: 15%;
+  right: 2rem;
+  color: #00FFCC; /* Neon Green-Cyan */
+}
+
+/* Position and style for the "Again!" button */
+.again {
+  margin-top: 50px;
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  transform: translateY(-50%);
+}
+
+.number {
+  background: #CCFFFF; /* Bright contrast */
+  color: #1a0033; /* Dark text */
+  font-size: 2rem;
+  width: 15rem; /* Larger, more prominent box */
+  padding: 1rem 0;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  border-radius: 10px;
+  border: 5px solid #00FFCC;
+  box-shadow: 0 0 20px #00FFCC; /* Glowing effect */
+}
+
+/* Button Styling (General) */
+.btn {
+  border: none;
+  background-color: #FF00AA; /* Neon Pink */
+  color: #1a0033;
+  font-size: 2.2rem;
+  padding: 1.5rem 3.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: 50px; /* Pill shape for funky look */
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: 3px solid #CCFFFF;
+}
+
+.btn:hover {
+  background-color: #CCFFFF; /* Swap colors on hover */
+  color: #FF00AA;
+  box-shadow: 0 0 15px #FF00AA;
+  transform: translateY(-2px) scale(1.05); /* Slight lift and scale */
+}
+
+/* Main Content Layout */
+main {
+  width: 100%;
+  max-width: 85rem;
+  display: flex;
+  flex-direction: row;
+  gap: 8rem;
+  justify-content: space-around;
+  padding-top: 2rem;
+}
+
+/* Left Section (Input) */
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.guess {
+  background: #1a0033;
+  border: 5px solid #00FFCC; /* Neon Green-Cyan border */
+  color: #CCFFFF;
+  font-size: 6rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 30rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  display: block;
+  border-radius: 15px; /* Slightly rounded corners */
+  box-shadow: 0 0 15px #00FFCC;
+}
+
+/* Right Section (Messages and Score) */
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 2rem;
+}
+
+.message,
+.label-score,
+.label-highscore {
+  font-size: 2.8rem;
+  margin-bottom: 2.5rem;
+  color: #CCFFFF;
+}
+
+.message {
+  /* Dynamic pulsing for the message */
+  animation: pulse 1.5s infinite alternate;
+  min-height: 3rem; /* Prevents layout shift */
+}
+
+@keyframes pulse {
+  from { text-shadow: 0 0 5px #CCFFFF; }
+  to { text-shadow: 0 0 15px #FF00AA; }
+}
+
+.score,
+.highscore {
+  font-weight: 900; /* Extra bold */
+  color: #00FFCC;
+  text-shadow: 0 0 5px #00FFCC;
+  margin-left: 1rem;
+}
+
+/* Leaderboard Button */
+#leaderboardBtn {
+  margin-top: 1rem;
+  background-color: #330066; /* Darker purple for distinction */
+  color: #FF00AA;
+  border: 3px solid #FF00AA;
+  border-radius: 10px;
+  padding: 1.2rem 2.5rem;
+}
+
+#leaderboardBtn:hover {
+  background-color: #FF00AA;
+  color: #1a0033;
+}
+
+/* Leaderboard Container and List */
+#leaderboardContainer {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+  border: 2px solid #CCFFFF;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #CCFFFF;
+  width: 100%;
+  max-width: 35rem;
+}
+
+.leaderboardli {
+  list-style-type: none;
+  font-size: 2.2rem;
+  color: #CCFFFF;
+}
+
+.leaderboardli li {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-bottom: 1px dashed #330066;
+  background-color: rgba(255, 0, 170, 0.05); /* Very subtle pink highlight */
+}
+
+/* Utility Class from JS for Hiding */
+.hideBoard {
+  display: none !important;
+}
+
+/* --- Media Queries for Responsiveness --- */
+
+/* Small Screens (e.g., Mobile Phones) - Max Width 750px */
+@media (max-width: 750px) {
+  body {
+    padding: 1.5rem;
+  }
+
+  header {
+    margin-bottom: 10rem;
+    padding-bottom: 2rem;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 2cap;
+    padding-top: 2rem;
+  }
+
+  /* Repositioning the "Again!" button for stacking */
+  .again {
+    position: static;
+    transform: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+    display: block;
+    width: 90%;
+    max-width: 25rem;
+    margin: 1rem auto;
+    margin-bottom: 5px;
+  }
+
+  .between {
+    position: static;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+
+  .number {
+    width: 15rem;
+    font-size: 1.5rem;
+    padding: 0.2rem 0;
+    /* Keeping centered */
+  }
+
+  main {
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .left, .right {
+      width: 95%;
+      max-width: 40rem;
+      align-items: center;
+      padding-left: 0; /* Remove padding from right section in stack */
+  }
+  
+  .guess {
+    font-size: 5rem;
+    padding: 1.5rem;
+    max-width: 95%;
+  }
+
+  .btn.check {
+      width: 95%;
+      max-width: 30rem;
+  }
+
+  .message,
+  .label-score,
+  .label-highscore {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Extra Small Screens (Max Width 400px) */
+@media (max-width: 400px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+    }
+}
