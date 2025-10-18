@@ -1,0 +1,176 @@
+/* Basic Reset and Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to top left, #5c67f8, #07ff17); /* Gradient Background */
+}
+
+/* Game Container */
+.game-container {
+    display: flex;
+    width: 90%;
+    max-width: 900px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Player Panels */
+.player-panel {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.75s;
+}
+
+.player-name {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Player 1 Specific Style (Blue) */
+.player-1-panel {
+    background-color: #9090ff; /* Light Blue */
+}
+/* Player 2 Specific Style (Red) */
+.player-2-panel {
+    background-color: #c3ff83; /* Light Red */
+}
+
+/* Active Player Highlight */
+.active-player {
+    background-color: #ffffff; /* White background for the active player */
+}
+.active-player .player-name {
+    font-weight: 800;
+    color: #5c67f8; /* Highlighted name color */
+}
+
+/* High Score and Current Score */
+.high-score-label {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #777;
+}
+
+.high-score {
+    font-size: 60px;
+    font-weight: 400;
+    color: #5c67f8;
+    margin-bottom: 40px;
+}
+
+.current-score-box {
+    background-color: #5c67f8;
+    color: #fff;
+    width: 70%;
+    padding: 15px;
+    border-radius: 9px;
+    text-align: center;
+    margin-top: auto; /* Push to the bottom */
+}
+
+.current-score-label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.current-score {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+/* Controls (Buttons and Dice) */
+.controls {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+}
+
+.dice-img {
+    height: 90px;
+    margin: 20px 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.btn {
+    background: none;
+    color: #333;
+    border: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+}
+
+.btn-roll {
+    background-color: #fff;
+}
+
+.btn-reset {
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Winner Message */
+.winner-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffc107;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 30px;
+    font-weight: 800;
+    color: #333;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 20;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Disable Button Style */
+.btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    transform: none;
+    box-shadow: none;
+}

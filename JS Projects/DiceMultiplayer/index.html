@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-Player Dice Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="game-container">
+        
+        <section class="player-panel player-1-panel active-player">
+            <h2 class="player-name">Player 1 🎲</h2>
+            <p class="high-score-label">High Score:</p>
+            <p class="high-score player-1-high-score">0</p>
+            <div class="current-score-box">
+                <p class="current-score-label">Current Score</p>
+                <p class="current-score player-1-current-score">0</p>
+            </div>
+        </section>
+
+        <section class="player-panel player-2-panel">
+            <h2 class="player-name">Player 2</h2>
+            <p class="high-score-label">High Score:</p>
+            <p class="high-score player-2-high-score">0</p>
+            <div class="current-score-box">
+                <p class="current-score-label">Current Score</p>
+                <p class="current-score player-2-current-score">0</p>
+            </div>
+        </section>
+
+        <div class="controls">
+            <button class="btn btn-reset">🔄 Reset Game</button>
+            <img src="dice-1.png" alt="Rolling Dice" class="dice-img">
+            <button class="btn btn-roll">🎲 Roll Dice</button>
+            <p class="winner-message hidden">🎉 Winner!</p>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
